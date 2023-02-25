@@ -1,0 +1,53 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as *;
+
+.footer {
+  padding: 140px 39px 90px;
+  background-color: #000;
+  &-location {
+    display: flex;
+    justify-content: space-between;
+    .card {
+      h5 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 25px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        text-align: left;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+      p:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &-nums {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    .num-boxes {
+      a {
+        color: #fff;
+        padding-left: 39px;
+        &::before {
+          content: url("../../images/icons/phone.svg");
+        }
+      }
+    }
+  }
+  &-politic {
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      margin-top: 218px;
+      margin-bottom: 0;
+    }
+  }
+
+}
