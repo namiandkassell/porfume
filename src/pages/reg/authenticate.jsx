@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import eye from "../../images/eye.png";
+import firebase, { signInWithGoogle } from "../../services/firebase";
 
 const Authenticate = () => {
   const {
@@ -9,6 +10,8 @@ const Authenticate = () => {
     watch,
     formState: { errors },
   } = useForm();
+
+  const [user, setUser] = useState();
   const [passwordType, setPasswordType] = useState("password");
   const [repassType, setRepassType] = useState("password");
 
@@ -23,6 +26,14 @@ const Authenticate = () => {
   function onSubmit(data) {
     console.log(data);
   }
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      setUser(user);
+
+      localStorage.setItem("current-user", user.email);
+    });
+  }, []);
 
   return (
     <div className="container-1">
@@ -56,6 +67,15 @@ const Authenticate = () => {
               <span>Пароль должен быть длиннее 6 символов</span>
             )}
           </label>
+
+          <label htmlFor="google-oauth2">
+            <input
+              type="button"
+              value="Sign in with google"
+              onClick={signInWithGoogle}
+            />
+          </label>
+
           <label>
             <button type="submit">Войти</button>
           </label>

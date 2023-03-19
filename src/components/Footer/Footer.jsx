@@ -23,16 +23,16 @@ function Footer(props) {
           </div>
           <div className="footer-nums">
             <div className="num-boxes">
-              <a href="tel:996705609393">Штаб: +996705609393</a>
-              <a href="tel:996705609393">Штаб: +996705609393</a>
+              <a href="tel:996705609393">Штаб: +996 705 60 93 93</a>
+              <a href="tel:996705609393">Штаб: +996 705 60 93 93</a>
             </div>
             <div className="num-boxes">
-              <a href="tel:996705609393">Штаб: +996705609393</a>
-              <a href="tel:996705609393">Штаб: +996705609393</a>
+              <a href="tel:996705609393">Штаб: +996 705 60 93 93</a>
+              <a href="tel:996705609393">Штаб: +996 705 60 93 93</a>
             </div>
             <div className="num-boxes">
-              <a href="tel:996705609393">Штаб: +996705609393</a>
-              <a href="tel:996705609393">Штаб: +996705609393</a>
+              <a href="tel:996705609393">Штаб: +996 705 60 93 93</a>
+              <a href="tel:996705609393">Штаб: +996 705 60 93 93</a>
             </div>
           </div>
           <div className="footer-politic">

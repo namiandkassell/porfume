@@ -9,6 +9,7 @@ const PasswordRecovery = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  
   const [passwordType, setPasswordType] = React.useState("password");
   const [repassType, setRepassType] = React.useState("password");
 
